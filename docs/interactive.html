@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script type="text/javascript" src="lib/d3.v3.min.js"></script>
+<script type="text/javascript" src = "lib/d3.tip.v0.6.3.js"></script>
+<script type="text/javascript" src="data.js"></script>
+
+<style>
+
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+  stroke-width: 1.5px;
+}
+
+path.link:hover {
+  stroke-opacity: .8;
+}
+
+circle {
+  stroke: #7a7a7a;
+  stroke-width: 1.5px;
+}
+.fixed {
+  stroke: black;
+  stroke-width: 3.0px;
+}
+
+circle:hover {
+  stroke:black;
+  stroke-width: 3.0px;
+}
+
+.tip {
+  background: black;
+  color: #fff;
+  padding: 2px;
+  border-radius: 0px;
+  font-size: 12px;
+  text-align: center;
+}
+
+text {
+  fill: black;
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+#options_category {
+  /*display: inline-block;*/
+  position:relative;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+#options_category_weight {
+  position:relative;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.checkbox-grid li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+</style>
+<body>
+
+<div id="options" align="top" style="height:20%; width:100%; display: inline-block;">
+
+
+  <div id="options_category" style="padding-top:10px; padding-botttom: 10px; display:inline-block">
+    <!--input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR005094" checked>IPR005094<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014862" >IPR014862<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014059" >IPR014059<br-->
+
+    <input type="radio" name="edgeType" value="ice" onclick="edgeTypeChange(this)" checked>ICE<br>
+    <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="cargo"> Cargo<br>
+    <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="amr" >Cargo AMR genes<br>
+
+    <p> Filter By: </p>
+    <ul id="iceFilter" class="checkbox-grid">
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEEc2" >ICEEc2<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="R391" >R391<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEPdaSpa1" >ICEPdaSpa1<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="SXT" >SXT<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEBs1" >ICEBs1<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="RD2" >RD2<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEEc1" >ICEEc1<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEKp1" >ICEKp1<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR022391" >IPR022391<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR021300" >IPR021300<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR022303" >IPR022303<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR025955" >IPR025955<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR011119" >IPR011119<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="Tn916" >Tn916<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICESde3396" >ICESde3396<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEhin1056" >ICEhin1056<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014129" >IPR014129<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014862" >IPR014862<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014059" >IPR014059<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR005094" checked>IPR005094<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR011952" >IPR011952<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="TnGBS2" >TnGBS2<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEclc" >ICEclc<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="GI3" >GI3<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICE6013" >ICE6013<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="CTn341" >CTn341<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="Tn1549" >Tn1549<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014136" >IPR014136<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="Tn4555" >Tn4555<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="CTnBST" >CTnBST<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEMISymR7A" >ICEMISymR7A<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR020369" >IPR020369<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICESt1" >ICESt1<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICESt3" >ICESt3<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="pKLC102" >pKLC102<br></li>
+    <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="PAPI-1" >PAPI-1<br></li>
+  </ul>
+
+
+    
+
+  </div>
+
+</div>
+
+<div id="viz"style="height:75%; width:100%; display: inline-block; overflow:scroll;">
+</div>
+
+<script type-"text/javascript" src="interactive.js"></script>
+</body>
+</html>
