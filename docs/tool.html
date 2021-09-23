@@ -1,7 +1,16 @@
 <!doctype html>
 <html lang="en">
 
-${require('../includes/_head-tag.html') secondayTitle=" :: Tool"}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <title>ggMod-Net :: Tool</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+</head>
 <style>
     path.link {
         fill: none;
@@ -67,7 +76,20 @@ ${require('../includes/_head-tag.html') secondayTitle=" :: Tool"}
 <body>
     <div class="col-md-8 py-5 px-3 mx-auto">
 
-        ${require('../includes/_header.html') nav="tool"}
+        <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="assets/img/logo.png" alt="" width="35" height="35" class="d-inline-block align-text-middle">
+        <span class="fs-4 ms-2"> ggMOB-Net</span>
+    </a>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 tool">
+        <li><a href="./index.html" class="nav-link px-2 link-dark nav-about">About</a></li>
+        <li><a href="./tool.html" class="nav-link px-2 link-dark nav-tool">Tool</a></li>
+        <li><a href="./downloads.html" class="nav-link px-2 link-dark nav-downloads">Downloads</a></li>
+        <li><a href="./contact.html" class="nav-link px-2 link-dark nav-contact">Contact</a></li>
+    </ul>
+
+</header>
 
 
 
@@ -170,13 +192,13 @@ ${require('../includes/_head-tag.html') secondayTitle=" :: Tool"}
 
         <hr class="my-5">
 
-        ${require('../includes/_footer.html') }
+        <p class="text-muted">&copy;2021 Nayar et al. Licensed GPL.</p>
     </div>
-    ${require('../includes/_javascript-includes.html') }
-    <script type="text/javascript" src="lib/d3.v3.min.js"></script>
-    <script type="text/javascript" src="lib/d3.tip.v0.6.3.js"></script>
-    <script type="text/javascript" src="data.js"></script>
-    <script type-"text/javascript" src="interactive.js"></script>
+    <script type="module" src="./assets/js/site.js"></script>
+    <script type="text/javascript" src="ggMod/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="ggMod/lib/d3.tip.v0.6.3.js"></script>
+    <script type="text/javascript" src="ggMod/data.js"></script>
+    <script type-"text/javascript" src="ggMod/interactive.js"></script>
 
 
 </body>
