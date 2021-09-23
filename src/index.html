@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+${require('./includes/_head-tag.html') foo="and you can also pass props"}
+
+<body>
+  <div class="col-md-8 mx-auto">
+
+    ${require('./includes/_header.html') nav="about"}
+
+    <h1 class="h2 fw-light">ggMOB-Net: Elucidation of Genomic Conjugative Features and Associated Cargo Genes across
+      Bacterial Genera Using Genus-Genus Mobilization Networks</h1>
+    <h2 class="h4 fw-light text-muted">Gowri Nayar, Ignacio Terrizzano, Ed Seabolt, Akshay Agarwal, Christina Boucher,
+      Ilya B Sizovskiy, James H Kaufman, Noelle Noyes</h2>
+    <p>${require('./includes/_abstract.html')}</p>
+    <a type="button" class="btn btn-outline-primary ml-3" href="ggMod/index.html">View Visualization</a>
+
+
+    <div class="row mt-1 mt-md-4 gx-5">
+      <div class="col-md-6">
+        <h2>Highlights</h2>
+        <ul>
+          <li>We construct a frequency-based mobile network showing genus-genus conjugation features and cargo genes
+            from >200,000
+            publicly available bacterial genomes, representing 1,345 different genera.</li>
+          <li>We make the resulting computational method which allows the network to be queried and visualized publicly
+            available under the <a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GNU v3
+              license</a>: . We refer to our method as (ggMOB-Net).</li>
+          <li>We show how ggMOB-Net can be used to provide insight into conjugative mobilization between unculturable
+            bacteria spanning multiple genera.</li>
+          <li>In particular, we observe that the ratio of AMR gene representation in conjugative versus non-conjugative
+            genomes exceeded 5:1, confirming that conjugation is a critical force for antimicrobial resistance spread
+            across genera.</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Citation</h2>
+        TDB
+      </div>
+    </div>
+
+    <hr class="my-5" />
+    ${require('./includes/_footer.html') }
+  </div>
+  ${require('./includes/_javascript-includes.html') }
+</body>
+
+</html>
