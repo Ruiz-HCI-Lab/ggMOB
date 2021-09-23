@@ -30,7 +30,8 @@
     "server": "sirv docs --dev --port 3000",
     "html-watch": "html-includes --src src --dest docs --watch",
     "start": "npm-run-all --parallel css-watch html-watch server",
-    "cz": "git-cz"
+    "cz": "git-cz",
+    "release": "standard-version --no-verify"
   },
   "keywords": [],
   "dependencies": {
