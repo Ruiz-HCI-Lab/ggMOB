@@ -100,12 +100,17 @@
                 <!--input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR005094" checked>IPR005094<br></li>
             <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014862" >IPR014862<br></li>
             <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="IPR014059" >IPR014059<br-->
-
-                <input type="radio" name="edgeType" value="ice" onclick="edgeTypeChange(this)" checked>ICE<br>
-                <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="cargo"> Cargo<br>
-                <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="amr">Cargo AMR genes<br>
-
-                <p> Filter By: </p>
+                <div class="card float-end mb-2 ml-2 " style="width: 53%;">
+                    <div class="card-body p-2">
+                      <h6 class="card-subtitle mb-0 mt-0 text-muted">Legend</h6>
+                      <p class="card-text small">Edge thickness is proportional to the number of features (i.e., Conjugation Features, Cargo Genes, or AMR Genes, depending on selected filters) shared between the two connected nodes. Node diameter is proportional to the total number of incoming and outgoing edges.</p>
+                    </div>
+                </div>
+                <input type="radio" name="edgeType" value="ice" onclick="edgeTypeChange(this)" checked> Conjugation Features<br>
+                <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="cargo"> Cargo Genes<br>
+                <input type="radio" name="edgeType" onclick="edgeTypeChange(this)" value="amr"> AMR Genes<br>
+                
+                <h6 class=" mb-2 mt-2 text-muted">Filter By</h6>
                 <ul id="iceFilter" class="checkbox-grid">
                     <li><input type="checkbox" name="edges" onclick="edgesChange(this)" value="ICEEc2">ICEEc2<br>
                     </li>
@@ -187,7 +192,7 @@
 
         </div>
 
-        <div id="viz" class="my-5" style="height:1000;width:1060; overflow: visible;"></div>
+        <div id="viz" class="my-5" style="height:1000;width:1200; overflow: visible;"></div>
 
 
         <hr class="my-5">

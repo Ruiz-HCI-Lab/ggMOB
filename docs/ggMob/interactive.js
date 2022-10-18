@@ -13,8 +13,8 @@ links.forEach(function (link) {
 });
 
 
-var width = 1000,
-  height = 800;
+var width = 1200,
+  height = 950;
 
 var edge_type = 'ice';
 var edges_radio = ['IPR005094'];
