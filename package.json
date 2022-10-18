@@ -2,17 +2,17 @@
   "name": "ggMob",
   "version": "1.1.0",
   "private": false,
-  "description": "Website for materials part of ggMod journal article.",
+  "description": "Website for materials part of ggMOB journal article.",
   "author": "jaime.ruiz@ufl.edu",
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ruiz-HCI-Lab/ggMOD.git"
+    "url": "https://github.com/Ruiz-HCI-Lab/ggMOB.git"
   },
   "bugs": {
-    "url": "https://github.com/Ruiz-HCI-Lab/ggMOD/issues"
+    "url": "https://github.com/Ruiz-HCI-Lab/ggMOB/issues"
   },
-  "homepage": "https://ruiz-hci-lab.github.io/ggMOD/",
+  "homepage": "https://ruiz-hci-lab.github.io/ggMOB/",
   "scripts": {
     "css-build": "npm run css",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o docs/assets/css/",

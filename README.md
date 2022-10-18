@@ -2,7 +2,7 @@
 ### Gowri Nayar, Ignacio Terrizzano, Ed Seabolt, Akshay Agarwal, Christina Boucher, Ilya B Sizovskiy, James H Kaufman, Noelle Noyes
 
 ### Overview
-This repository contains all the source of the tool and website located at https://ruiz-hci-lab.github.io/ggMOD/ that accompanies the publication below
+This repository contains all the source of the tool and website located at https://ruiz-hci-lab.github.io/ggMOB/ that accompanies the publication below
 
 ### Citation
 TBD
