@@ -7,4 +7,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **site:** intial commit of full site and templates ([f109029](https://github.com/Ruiz-HCI-Lab/ggMOD/commit/f10902986c472ca5fd4dac74c48f9ab26df01419))
+* **site:** intial commit of full site and templates ([f109029](https://github.com/Ruiz-HCI-Lab/ggMOB/commit/f10902986c472ca5fd4dac74c48f9ab26df01419))
